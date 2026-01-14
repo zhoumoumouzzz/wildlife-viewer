@@ -1,0 +1,7 @@
+# 忽略所有图片和视频，只保留目录结构
+data/云南天池挑选动物视频文件20230309/*
+!data/云南天池挑选动物视频文件20230309/keyframe_images_with_box/
+
+# 忽略缓存
+__pycache__/
+.streamlit/
