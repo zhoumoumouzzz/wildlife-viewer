@@ -1,7 +1,5 @@
 streamlit
-mysql-connector-python
 pandas
 plotly
 openpyxl
-mysql-connector-python pooling
 streamlit-aggrid
