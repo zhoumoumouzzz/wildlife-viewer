@@ -1,13 +1,18 @@
-# 1. 忽略该目录下的一切
-data/云南天池挑选动物视频文件20230309/*
+# 1. 先忽略 data 下的所有内容
+data/**
 
-# 2. 逐级放行目录结构（不放行文件，只放行路径）
-!data/云南天池挑选动物视频文件20230309/
-!data/云南天池挑选动物视频文件20230309/keyframe_images_with_box/
+# 2. 递归式放行：允许进入任何数字文件夹和 test6.0 文件夹
+!data/云南天池挑选动物视频文件20230309/*/
+!data/云南天池挑选动物视频文件20230309/*/test6.0/
+!data/云南天池挑选动物视频文件20230309/*/test6.0/keyframe_images_with_box/
 
-# 3. 忽略该路径下的所有视频（防止误传大文件）
-data/云南天池挑选动物视频文件20230309/*.mp4
-data/云南天池挑选动物视频文件20230309/*.MOV
+# 3. 放行这些文件夹下的所有图片
+!data/云南天池挑选动物视频文件20230309/*/test6.0/keyframe_images_with_box/*.jpg
+!data/云南天池挑选动物视频文件20230309/*/test6.0/keyframe_images_with_box/*.png
+
+# 4. 显式排除视频文件夹（双重保险）
+data/**/Videos with Animals/
+data/**/Videos without Animals/
 
 # 忽略缓存
 __pycache__/
